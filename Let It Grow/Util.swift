@@ -11,5 +11,6 @@ import Foundation
 
 
 var UID:String!
+var USERNAME:String!
 
 let ref = Firebase(url: "https://shengxiang.firebaseio.com")

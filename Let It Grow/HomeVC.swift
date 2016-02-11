@@ -20,13 +20,13 @@ class HomeVC: UIViewController {
     }
 
     @IBAction func waterBtnPressed(sender: AnyObject) {
-        let alanisawesome = ["full_name": "Alan Turing", "date_of_birth": "June 23, 1912"]
-        let gracehop = ["full_name": "Grace Hopper", "date_of_birth": "December 9, 1906"]
+        let value = ["WaterStatus" : "true"]
+        print(UID)
+        let usersRef = ref.childByAppendingPath("users").childByAppendingPath(UID)
+        usersRef.updateChildValues(value)
         
-        let usersRef = ref.childByAppendingPath("users")
         
-        let users = ["alanisawesome": alanisawesome, "gracehop": gracehop]
-        usersRef.setValue(users)
+      //  usersRef.setValue(users)
     }
 
 

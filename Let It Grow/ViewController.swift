@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     //ref.createUser("shadowtesting@example.com", password: "correcthorsebatterystaple",
  
     @IBAction func signinBtnPressed(sender: AnyObject) {
+        
+        USERNAME = usernmaTF.text
+        
         ref.authUser("\(usernmaTF.text!)", password:"\(passwordTF.text)") {
             error, authData in
             if error != nil {
@@ -47,6 +50,8 @@ class ViewController: UIViewController {
                 print(authData.provider)
                 //print(authData.providerData["dispalyName"])
                 
+                
+                UID = authData.uid
                 // Create a new user dictionary accessing the user's info
                 // provided by the authData parameter
                 let newUser = [
