@@ -1,5 +1,5 @@
 //
-//  SideOneVC.swift
+//  SideTwoVC.swift
 //  Let It Grow
 //
 //  Created by shengxiang guo on 2/12/16.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SideOneVC: UIViewController {
+class SideTwoVC: UIViewController {
 
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  self.revealViewController().rearViewRevealWidth = 150
+        //  self.revealViewController().rearViewRevealWidth = 150
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -22,14 +22,5 @@ class SideOneVC: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
