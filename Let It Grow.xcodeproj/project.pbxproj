@@ -19,6 +19,7 @@
 		1798554C1C6DB38C00DD523F /* SideOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798554B1C6DB38C00DD523F /* SideOneVC.swift */; };
 		1798554E1C6DC8A300DD523F /* SideTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798554D1C6DC8A300DD523F /* SideTwoVC.swift */; };
 		179855501C6DC8C400DD523F /* SideThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798554F1C6DC8C400DD523F /* SideThreeVC.swift */; };
+		179855561C6DD28500DD523F /* AddPlantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179855551C6DD28500DD523F /* AddPlantVC.swift */; };
 		F9772B6F9709438E8701452F /* Pods_Let_It_Grow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B994B5263456734DDBA57E /* Pods_Let_It_Grow.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		1798554B1C6DB38C00DD523F /* SideOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideOneVC.swift; sourceTree = "<group>"; };
 		1798554D1C6DC8A300DD523F /* SideTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideTwoVC.swift; sourceTree = "<group>"; };
 		1798554F1C6DC8C400DD523F /* SideThreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideThreeVC.swift; sourceTree = "<group>"; };
+		179855551C6DD28500DD523F /* AddPlantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlantVC.swift; sourceTree = "<group>"; };
 		5104ED4A498A0A10CEC41376 /* Pods-Let It Grow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let It Grow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Let It Grow/Pods-Let It Grow.debug.xcconfig"; sourceTree = "<group>"; };
 		A3B994B5263456734DDBA57E /* Pods_Let_It_Grow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_It_Grow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF7EA90C4AF92C05CE4D98 /* Pods-Let It Grow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let It Grow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Let It Grow/Pods-Let It Grow.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				1798554B1C6DB38C00DD523F /* SideOneVC.swift */,
 				1798554D1C6DC8A300DD523F /* SideTwoVC.swift */,
 				1798554F1C6DC8C400DD523F /* SideThreeVC.swift */,
+				179855551C6DD28500DD523F /* AddPlantVC.swift */,
 				179855441C6DAA5D00DD523F /* SWRevealViewController */,
 			);
 			name = Controller;
@@ -279,6 +282,7 @@
 				1790E19D1C6C4D1A009231A8 /* HomeVC.swift in Sources */,
 				1790E18D1C6C4C5B009231A8 /* ViewController.swift in Sources */,
 				1798554E1C6DC8A300DD523F /* SideTwoVC.swift in Sources */,
+				179855561C6DD28500DD523F /* AddPlantVC.swift in Sources */,
 				179855481C6DAA7A00DD523F /* SWRevealViewController.m in Sources */,
 				1798554C1C6DB38C00DD523F /* SideOneVC.swift in Sources */,
 				1790E18B1C6C4C5B009231A8 /* AppDelegate.swift in Sources */,

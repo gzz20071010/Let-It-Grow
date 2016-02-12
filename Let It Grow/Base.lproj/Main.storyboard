@@ -158,11 +158,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgD-jy-Xjv">
-                                                    <rect key="frame" x="8" y="7" width="287" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAY-gy-z2z">
+                                                    <rect key="frame" x="8" y="6" width="304" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <segue destination="Pr7-q9-E7h" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZSQ-vV-4x7"/>
+                                                        <segue destination="8qU-65-MI6" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="8NJ-rp-JDi"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -177,7 +177,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvv-QG-VvS">
-                                                    <rect key="frame" x="8" y="6" width="287" height="30"/>
+                                                    <rect key="frame" x="-8" y="0.0" width="320" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <segue destination="wGl-qn-43S" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="kDO-XJ-eb5"/>
@@ -194,11 +194,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAY-gy-z2z">
-                                                    <rect key="frame" x="8" y="8" width="304" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgD-jy-Xjv">
+                                                    <rect key="frame" x="7" y="8" width="320" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <segue destination="8qU-65-MI6" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="8NJ-rp-JDi"/>
+                                                        <segue destination="Pr7-q9-E7h" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZSQ-vV-4x7"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -233,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fap-bY-QA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="-34"/>
+            <point key="canvasLocation" x="1535" y="-786"/>
         </scene>
         <!--Side TwoVC-->
         <scene sceneID="8f4-q2-1ln">
@@ -258,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lq-ac-ysN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="-713"/>
+            <point key="canvasLocation" x="1945" y="-65"/>
         </scene>
         <!--Side OneVC-->
         <scene sceneID="9d7-hm-Zlf">
@@ -271,18 +271,108 @@
                     <view key="view" contentMode="scaleToFill" id="cPA-KY-jSo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.36445610480000001" blue="0.13620798749999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Plants Added" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWd-ue-Q2R">
+                                <rect key="frame" x="8" y="260" width="304" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.69114434120000001" green="0.69195783710000003" blue="0.70437167550000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OWd-ue-Q2R" firstAttribute="centerX" secondItem="cPA-KY-jSo" secondAttribute="centerX" id="Cgf-ZY-B1K"/>
+                            <constraint firstItem="OWd-ue-Q2R" firstAttribute="centerY" secondItem="cPA-KY-jSo" secondAttribute="centerY" id="rhg-c7-wtN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oK8-3D-Moy">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="PbE-h5-HIL"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="PbE-h5-HIL">
+                            <color key="tintColor" red="0.69114434120000001" green="0.69195783710000003" blue="0.70437167550000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="add" id="Dth-mj-I5V">
+                            <color key="tintColor" red="0.69114434120000001" green="0.69195783710000003" blue="0.70437167550000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Iug-Ys-gT6" kind="show" id="0k5-eJ-OMr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="menuButton" destination="PbE-h5-HIL" id="mHK-ON-9F0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sv0-aj-Gsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="-34"/>
+            <point key="canvasLocation" x="1961" y="-778"/>
+        </scene>
+        <!--Add PlantVC-->
+        <scene sceneID="W4t-Mz-5hS">
+            <objects>
+                <viewController id="Iug-Ys-gT6" customClass="AddPlantVC" customModule="Let_It_Grow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hAo-NX-Vm2"/>
+                        <viewControllerLayoutGuide type="bottom" id="iyg-GS-4Fb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zlf-4i-2IM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-k0-gMs">
+                                <rect key="frame" x="16" y="114" width="288" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Serial Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jax-rw-Wa5">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-HJ-jmp">
+                                        <rect key="frame" x="0.0" y="35" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ideal Water Level (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ZU-Hy-rxc">
+                                        <rect key="frame" x="0.0" y="70" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="srq-LW-8kk">
+                                <rect key="frame" x="16" y="314" width="288" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkV-if-mbp">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <color key="backgroundColor" red="0.82803781249999997" green="0.82901243589999996" blue="0.84388505650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqu-j1-Fie">
+                                        <rect key="frame" x="0.0" y="40" width="288" height="30"/>
+                                        <color key="backgroundColor" red="0.82803781249999997" green="0.82901243589999996" blue="0.84388505650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tfm-k0-gMs" firstAttribute="leading" secondItem="zlf-4i-2IM" secondAttribute="leadingMargin" id="74T-A2-a4L"/>
+                            <constraint firstItem="srq-LW-8kk" firstAttribute="top" secondItem="tfm-k0-gMs" secondAttribute="bottom" constant="100" id="dSJ-9g-xkQ"/>
+                            <constraint firstItem="srq-LW-8kk" firstAttribute="leading" secondItem="zlf-4i-2IM" secondAttribute="leadingMargin" id="hOy-aF-f2U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="srq-LW-8kk" secondAttribute="trailing" id="lQG-51-soO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tfm-k0-gMs" secondAttribute="trailing" id="q2e-oU-U5P"/>
+                            <constraint firstItem="tfm-k0-gMs" firstAttribute="top" secondItem="hAo-NX-Vm2" secondAttribute="bottom" constant="50" id="u0V-XV-MEo"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao5-pK-Cet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="-778"/>
         </scene>
         <!--Side ThreeVC-->
         <scene sceneID="6CE-Xj-Apn">
@@ -326,7 +416,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKr-e9-rKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="-727"/>
+            <point key="canvasLocation" x="1523" y="-71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dr3-BZ-wi9">
@@ -349,6 +439,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="22" height="22"/>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
