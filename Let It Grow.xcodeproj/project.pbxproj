@@ -14,6 +14,9 @@
 		1790E1951C6C4C5B009231A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790E1931C6C4C5B009231A8 /* LaunchScreen.storyboard */; };
 		1790E19D1C6C4D1A009231A8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790E19C1C6C4D1A009231A8 /* HomeVC.swift */; };
 		1790E19F1C6C52F5009231A8 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790E19E1C6C52F5009231A8 /* Util.swift */; };
+		179855481C6DAA7A00DD523F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 179855471C6DAA7A00DD523F /* SWRevealViewController.m */; };
+		1798554A1C6DABE400DD523F /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179855491C6DABE400DD523F /* MenuVC.swift */; };
+		1798554C1C6DB38C00DD523F /* SideOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798554B1C6DB38C00DD523F /* SideOneVC.swift */; };
 		F9772B6F9709438E8701452F /* Pods_Let_It_Grow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B994B5263456734DDBA57E /* Pods_Let_It_Grow.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,11 @@
 		1790E1961C6C4C5B009231A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1790E19C1C6C4D1A009231A8 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1790E19E1C6C52F5009231A8 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		179855451C6DAA7900DD523F /* Let It Grow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Let It Grow-Bridging-Header.h"; sourceTree = "<group>"; };
+		179855461C6DAA7A00DD523F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		179855471C6DAA7A00DD523F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		179855491C6DABE400DD523F /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		1798554B1C6DB38C00DD523F /* SideOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideOneVC.swift; sourceTree = "<group>"; };
 		5104ED4A498A0A10CEC41376 /* Pods-Let It Grow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let It Grow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Let It Grow/Pods-Let It Grow.debug.xcconfig"; sourceTree = "<group>"; };
 		A3B994B5263456734DDBA57E /* Pods_Let_It_Grow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Let_It_Grow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF7EA90C4AF92C05CE4D98 /* Pods-Let It Grow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Let It Grow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Let It Grow/Pods-Let It Grow.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +73,7 @@
 		1790E1891C6C4C5B009231A8 /* Let It Grow */ = {
 			isa = PBXGroup;
 			children = (
+				179855441C6DAA5D00DD523F /* SWRevealViewController */,
 				1790E18A1C6C4C5B009231A8 /* AppDelegate.swift */,
 				1790E19E1C6C52F5009231A8 /* Util.swift */,
 				1790E19C1C6C4D1A009231A8 /* HomeVC.swift */,
@@ -73,8 +82,20 @@
 				1790E1911C6C4C5B009231A8 /* Assets.xcassets */,
 				1790E1931C6C4C5B009231A8 /* LaunchScreen.storyboard */,
 				1790E1961C6C4C5B009231A8 /* Info.plist */,
+				179855491C6DABE400DD523F /* MenuVC.swift */,
+				1798554B1C6DB38C00DD523F /* SideOneVC.swift */,
 			);
 			path = "Let It Grow";
+			sourceTree = "<group>";
+		};
+		179855441C6DAA5D00DD523F /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				179855461C6DAA7A00DD523F /* SWRevealViewController.h */,
+				179855471C6DAA7A00DD523F /* SWRevealViewController.m */,
+				179855451C6DAA7900DD523F /* Let It Grow-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		468D57583D426FF55190997A /* Pods */ = {
@@ -218,8 +239,11 @@
 			files = (
 				1790E19D1C6C4D1A009231A8 /* HomeVC.swift in Sources */,
 				1790E18D1C6C4C5B009231A8 /* ViewController.swift in Sources */,
+				179855481C6DAA7A00DD523F /* SWRevealViewController.m in Sources */,
+				1798554C1C6DB38C00DD523F /* SideOneVC.swift in Sources */,
 				1790E18B1C6C4C5B009231A8 /* AppDelegate.swift in Sources */,
 				1790E19F1C6C52F5009231A8 /* Util.swift in Sources */,
+				1798554A1C6DABE400DD523F /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +357,14 @@
 			baseConfigurationReference = 5104ED4A498A0A10CEC41376 /* Pods-Let It Grow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Let It Grow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengxiang.Let-It-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Let It Grow/Let It Grow-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,11 +373,13 @@
 			baseConfigurationReference = CEAF7EA90C4AF92C05CE4D98 /* Pods-Let It Grow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Let It Grow/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shengxiang.Let-It-Grow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Let It Grow/Let It Grow-Bridging-Header.h";
 			};
 			name = Release;
 		};
