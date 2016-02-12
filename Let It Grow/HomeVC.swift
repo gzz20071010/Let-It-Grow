@@ -26,6 +26,7 @@ class HomeVC: UIViewController {
         usersRef.updateChildValues(value)
         
         print("branch")
+        print("branch")
       //  usersRef.setValue(users)
     }
 
