@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
         let usersRef = ref.childByAppendingPath("users").childByAppendingPath(UID)
         usersRef.updateChildValues(value)
         
-        
+        print("branch")
       //  usersRef.setValue(users)
     }
 
