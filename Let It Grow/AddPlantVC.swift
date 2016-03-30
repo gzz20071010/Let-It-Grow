@@ -24,9 +24,11 @@ class AddPlantVC: UIViewController {
         
         let value = ["DeviceSerialNumber" : serialNumTextfield.text!,
                      "PlantName": plantNameTF.text!,
-                    "IdealWaterLevel":idealWaterLevelTF.text!]
-
-        let usersRef = ref.childByAppendingPath("users").childByAppendingPath(UID)
+                     "IdealWaterLevel":idealWaterLevelTF.text!]
+        
+        let usersRef = ref.childByAppendingPath("users").childByAppendingPath(UID).childByAppendingPath("Devices")
+        .childByAppendingPath(serialNumTextfield.text)
+        
         usersRef.updateChildValues(value)
         
         performSegueWithIdentifier("SideOneVC", sender: nil)

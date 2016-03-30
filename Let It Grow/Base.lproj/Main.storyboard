@@ -113,9 +113,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCm-ex-uJO">
                                 <rect key="frame" x="139.5" y="269" width="41" height="30"/>
                                 <state key="normal" title="Water"/>
-                                <connections>
-                                    <action selector="waterBtnPressed:" destination="cQW-Sv-Bys" eventType="touchUpInside" id="Ckj-cx-yTt"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

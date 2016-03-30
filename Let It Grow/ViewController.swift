@@ -56,7 +56,7 @@ class ViewController: UIViewController {
                 // provided by the authData parameter
                 let newUser = [
                     "provider": authData.provider,
-                    "WaterStatus": "false",
+                    //"WaterStatus": "false",
                     "username": self.usernmaTF.text
                     //"displayName": authData.providerData["displayName"] as? NSString as? String,
                 ]
@@ -67,9 +67,10 @@ class ViewController: UIViewController {
                 //  - https://<YOUR-FIREBASE-APP>.firebaseio.com/users/<uid>
                 ref.childByAppendingPath("users").childByAppendingPath("\(authData.uid)")
                     .updateChildValues(newUser)
+                
+                self.performSegueWithIdentifier("HomeVC", sender: nil)
             }
         }
-        performSegueWithIdentifier("HomeVC", sender: nil)
     }
 
     @IBAction func signupBtnPressed(sender: AnyObject) {
