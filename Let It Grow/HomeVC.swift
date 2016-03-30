@@ -11,7 +11,7 @@ import Firebase
 
 class HomeVC: UIViewController {
 
-    var ref = Firebase(url: "https://shengxiang.firebaseio.com")
+    var ref = Firebase(url: "https://letitgrow.firebaseio.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()

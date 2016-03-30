@@ -10,6 +10,9 @@ import UIKit
 
 class AddPlantVC: UIViewController {
 
+    @IBOutlet weak var idealWaterLevelTF: UITextField!
+    @IBOutlet weak var plantNameTF: UITextField!
+    @IBOutlet weak var serialNumTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,5 +20,8 @@ class AddPlantVC: UIViewController {
     }
 
 
+    @IBAction func onAddBtnPressed(sender: AnyObject) {
+    }
 
+    @IBOutlet weak var onCancelBtnPressed: UIButton!
 }
