@@ -21,7 +21,17 @@ class AddPlantVC: UIViewController {
 
 
     @IBAction func onAddBtnPressed(sender: AnyObject) {
+        
+        let value = ["DeviceSerialNumber" : serialNumTextfield.text!,
+                     "PlantName": plantNameTF.text!,
+                    "IdealWaterLevel":idealWaterLevelTF.text!]
+
+        let usersRef = ref.childByAppendingPath("users").childByAppendingPath(UID)
+        usersRef.updateChildValues(value)
+        
+        performSegueWithIdentifier("SideOneVC", sender: nil)
+        
+
     }
 
-    @IBOutlet weak var onCancelBtnPressed: UIButton!
 }

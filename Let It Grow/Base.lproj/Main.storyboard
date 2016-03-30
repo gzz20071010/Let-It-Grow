@@ -372,11 +372,29 @@
                                 <color key="textColor" red="0.69114434120000001" green="0.69195783710000003" blue="0.70437167550000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6yE-44-nIA">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlantCell" id="3p9-Kx-yeY">
+                                        <rect key="frame" x="0.0" y="28" width="328" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3p9-Kx-yeY" id="CKn-TB-1Si">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94901960780000005" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OWd-ue-Q2R" firstAttribute="centerX" secondItem="cPA-KY-jSo" secondAttribute="centerX" id="Cgf-ZY-B1K"/>
+                            <constraint firstItem="tVD-Jb-PDe" firstAttribute="top" secondItem="6yE-44-nIA" secondAttribute="bottom" id="Exu-H1-DPv"/>
+                            <constraint firstItem="6yE-44-nIA" firstAttribute="leading" secondItem="cPA-KY-jSo" secondAttribute="leadingMargin" constant="-20" id="Mws-oI-ikQ"/>
                             <constraint firstItem="OWd-ue-Q2R" firstAttribute="centerY" secondItem="cPA-KY-jSo" secondAttribute="centerY" id="rhg-c7-wtN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6yE-44-nIA" secondAttribute="trailing" constant="-20" id="rtz-PY-DSM"/>
+                            <constraint firstItem="6yE-44-nIA" firstAttribute="top" secondItem="cPA-KY-jSo" secondAttribute="topMargin" id="u5r-vE-mV6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oK8-3D-Moy">
@@ -393,6 +411,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="menuButton" destination="PbE-h5-HIL" id="mHK-ON-9F0"/>
+                        <outlet property="noPlantLb" destination="OWd-ue-Q2R" id="XV6-ck-rQP"/>
+                        <outlet property="tableView" destination="6yE-44-nIA" id="K5c-YL-SP4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sv0-aj-Gsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,14 +489,13 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Onf-I3-kZb">
                             <color key="tintColor" red="0.69114434120000001" green="0.69195783710000003" blue="0.70437167550000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="yug-WX-wy0" kind="show" animates="NO" id="SC8-hF-3NB"/>
+                                <segue destination="yug-WX-wy0" kind="show" identifier="SideOneVC" animates="NO" id="SC8-hF-3NB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="idealWaterLevelTF" destination="1ZU-Hy-rxc" id="MYY-su-qFD"/>
-                        <outlet property="onCancelBtnPressed" destination="vqu-j1-Fie" id="G8a-mw-Gw7"/>
                         <outlet property="plantNameTF" destination="cMf-HJ-jmp" id="A1l-9O-OQe"/>
                         <outlet property="serialNumTextfield" destination="jax-rw-Wa5" id="qgt-cc-U8l"/>
                     </connections>
