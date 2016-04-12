@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		176861971CAC6035006145EA /* PlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176861961CAC6035006145EA /* PlantCell.swift */; };
 		176861991CAC62E8006145EA /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176861981CAC62E8006145EA /* Plant.swift */; };
+		1768619F1CB84EC6006145EA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768619E1CB84EC6006145EA /* Date.swift */; };
+		176861A31CBD3B2F006145EA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176861A21CBD3B2F006145EA /* DetailVC.swift */; };
 		1790E18B1C6C4C5B009231A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790E18A1C6C4C5B009231A8 /* AppDelegate.swift */; };
 		1790E18D1C6C4C5B009231A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790E18C1C6C4C5B009231A8 /* ViewController.swift */; };
 		1790E1901C6C4C5B009231A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790E18E1C6C4C5B009231A8 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		176861961CAC6035006145EA /* PlantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCell.swift; sourceTree = "<group>"; };
 		176861981CAC62E8006145EA /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		1768619E1CB84EC6006145EA /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		176861A21CBD3B2F006145EA /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		1790E1871C6C4C5B009231A8 /* Let It Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let It Grow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1790E18A1C6C4C5B009231A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1790E18C1C6C4C5B009231A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				176861981CAC62E8006145EA /* Plant.swift */,
+				1768619E1CB84EC6006145EA /* Date.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				1798554D1C6DC8A300DD523F /* SideTwoVC.swift */,
 				1798554F1C6DC8C400DD523F /* SideThreeVC.swift */,
 				179855551C6DD28500DD523F /* AddPlantVC.swift */,
+				176861A21CBD3B2F006145EA /* DetailVC.swift */,
 				179855441C6DAA5D00DD523F /* SWRevealViewController */,
 			);
 			name = Controller;
@@ -295,7 +301,9 @@
 				1798554C1C6DB38C00DD523F /* SideOneVC.swift in Sources */,
 				1790E18B1C6C4C5B009231A8 /* AppDelegate.swift in Sources */,
 				1790E19F1C6C52F5009231A8 /* Util.swift in Sources */,
+				1768619F1CB84EC6006145EA /* Date.swift in Sources */,
 				1798554A1C6DABE400DD523F /* MenuVC.swift in Sources */,
+				176861A31CBD3B2F006145EA /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

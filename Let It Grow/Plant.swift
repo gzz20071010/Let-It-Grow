@@ -10,23 +10,11 @@ import Foundation
 import UIKit
 
 class Plant{
-//    private var _deviceNumber:String!
-//    private var _deviceDescription:String!
-    private var _deviceName:String!
-    
-//     var deviceNumber: String{
-//        if _deviceNumber == nil{
-//            _deviceNumber = ""
-//        }
-//        return _deviceNumber
-//    }
-//    
-//    var deviceDescription: String{
-//        if _deviceDescription == nil{
-//            _deviceDescription = ""
-//        }
-//        return _deviceDescription
-//    }
+
+    private var _deviceName:String!  //chinaflower
+    private var _checkNow:String!      //0,1,2
+    private var _deviceID:String!      //serial code?
+    private var _date:[Date]!
     
     var deviceName: String{
         if _deviceName == nil{
@@ -35,5 +23,32 @@ class Plant{
         return _deviceName
     }
     
+    var deviceID: String{
+        if _deviceID == nil{
+            _deviceID = ""
+        }
+        return _deviceID
+    }
+    
+    var checkNow: String{
+        if _checkNow == nil{
+            _checkNow = ""
+        }
+        return _checkNow
+    }
+    
+    var date:[Date]{
+        if _date == nil{
+           _date = [Date]()
+        }
+        return _date
+    }
+    
+    init(deviceName: String, deviceID: String, checkNow: String, date: [Date]){
+        _deviceName = deviceName
+        _deviceID = deviceID
+        _checkNow = checkNow
+        _date = date
+    }
     
 }
