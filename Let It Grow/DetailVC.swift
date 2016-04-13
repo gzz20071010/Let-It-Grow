@@ -19,9 +19,12 @@ class DetailVC: UIViewController {
     @IBOutlet weak var sensor2: UILabel!
     @IBOutlet weak var tempReading: UILabel!
     
+    var plant:Plant!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        plantName.text = plant.deviceName
         
     }
     

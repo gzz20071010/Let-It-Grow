@@ -93,12 +93,23 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                                     }
                                    // print(aggregate)
                                
-                                }
-                            }
-                            plant = Plant(deviceName: "\(deviceName!)", deviceID: "\(deviceID)", checkNow: "\(checknow)", date: plantDates)
+                               }
+                        }
+                        plant = Plant(deviceName: "\(deviceName!)", deviceID: "\(deviceID)", checkNow: "\(checknow)", date: plantDates)
                            // print(plant.deviceName)
+                        
+                        var flag = false
+                        for p in self.myPlants{
+                            if p.deviceName == plant.deviceName{
+                                flag = true
+                            }
+                        }
+                        
+                        if !flag{
                             self.myPlants.append(plant)
                         }
+                        
+                    }
                     //}
                 }
                 
@@ -122,13 +133,7 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        if let cell = tableView.dequeueReusableCellWithIdentifier("PlantCell", forIndexPath: indexPath) as? PlantCell{
-//            var str: String!
-//            str = myDevices[indexPath.row]
-//            cell.textlb.text = str
-//            //print(myDevices[indexPath.row])
-//            return cell
-//        }
+
         if let cell = tableView.dequeueReusableCellWithIdentifier("PlantCell", forIndexPath: indexPath)as? PlantCell{
             let str = myPlants[indexPath.row].deviceName
             cell.textlb.text = str
@@ -142,9 +147,23 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("DetailVC", sender: nil)
-    }
+        let plant = myPlants[indexPath.row]
 
+        performSegueWithIdentifier("DetailVC", sender: plant)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "DetailVC"{
+
+            if let detailVC = segue.destinationViewController as? DetailVC{
+
+                if let plant = sender as? Plant{
+                    detailVC.plant = plant
+                }
+            }
+        }
+    }
 
 
 }
