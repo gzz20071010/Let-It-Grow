@@ -15,6 +15,9 @@ class Plant{
     private var _checkNow:String!      //0,1,2
     private var _deviceID:String!      //serial code?
     private var _date:[Date]!
+    private var _lastChecked:String!
+    private var _lastWatered:String!
+    private var _needsWater:Int!
     
     var deviceName: String{
         if _deviceName == nil{
@@ -36,6 +39,28 @@ class Plant{
         }
         return _checkNow
     }
+    
+    var lastChecked: String{
+        if _lastChecked == nil{
+            _lastChecked = ""
+        }
+        return _lastChecked
+    }
+
+    var lastWatered: String{
+        if _lastWatered == nil{
+            _lastWatered = ""
+        }
+        return _lastWatered
+    }
+
+    var needsWater: Int{
+        if _needsWater == nil{
+            _needsWater = -1
+        }
+        return _needsWater
+    }
+
     
     var date:[Date]{
         if _date == nil{

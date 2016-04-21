@@ -16,6 +16,11 @@ class PlantCell: UITableViewCell{
     
    // var plant:Plant!
     @IBOutlet weak var textlb: UILabel!
+    @IBOutlet weak var sensorLbl1: UILabel!
+    @IBOutlet weak var sensorLb2: UILabel!
+    @IBOutlet weak var sensorLb3: UILabel!
+    @IBOutlet weak var waterBtn: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,9 +31,15 @@ class PlantCell: UITableViewCell{
 //        self.plant = plant
 //        self.plantLb.text = plant.deviceName
 //    }
-//    
+//
 //    func configureCellString(str:String){
 //        print(str)
 //        self.plantLb.text = str
 //    }
+    func configureCell(plant:Plant){
+        
+    }
+    
+    @IBAction func onWaterBtnPressed(sender: AnyObject) {
+    }
 }
