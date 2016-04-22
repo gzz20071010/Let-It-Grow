@@ -46,8 +46,9 @@ class ViewController: UIViewController {
                 // Authentication just completed successfully :)
                 
                 // The logged in user's unique identifier
-                print(authData.uid)
-                print(authData.provider)
+                print("Authentication just completed successfully")
+                //print(authData.uid)
+                //print(authData.provider)
                 //print(authData.providerData["dispalyName"])
                 
                 

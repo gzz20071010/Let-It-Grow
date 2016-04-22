@@ -11,8 +11,9 @@ import Foundation
 class Date{
     
     private var _date:String!  //2016-Apr-01
-    private var _aggregate:[String]!      //0 LIGHT,1,2,4,5
-    private var _initial:[String]!      //0 LIGHT,1,2,4,5
+    private var _time:[Time]!
+//    private var _aggregate:[String]!      //0 LIGHT,1,2,4,5
+//    private var _initial:[String]!      //0 LIGHT,1,2,4,5
     
     var date: String{
         if _date == nil{
@@ -21,29 +22,38 @@ class Date{
         return _date
     }
     
-    var aggregate: [String]{
-        if _aggregate == nil{
-            _aggregate = [""]
+    var time:[Time]{
+        if _time == nil{
+            _time = [Time]()
         }
-        return _aggregate
+        return _time
     }
     
-    var initial: [String]{
-        if _initial == nil{
-            _initial = [""]
-        }
-        return _initial
-    }
-    
+//    var aggregate: [String]{
+//        if _aggregate == nil{
+//            _aggregate = [""]
+//        }
+//        return _aggregate
+//    }
+//    
+//    var initial: [String]{
+//        if _initial == nil{
+//            _initial = [""]
+//        }
+//        return _initial
+//    }
+//    
     init(date: String){
         self._date = ""
-        self._aggregate = [""]
-        self._initial = [""]
+        self._time = [Time]()
+//        self._aggregate = [""]
+//        self._initial = [""]
     }
     
-    init(date: String, aggregate: [String], initial:[String]){
+    init(date: String, time: [Time]){
         _date = date
-        _aggregate = aggregate
-        _initial = initial
+        _time = time
+//        _aggregate = aggregate
+//        _initial = initial
     }
 }

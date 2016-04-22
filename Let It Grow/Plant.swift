@@ -69,11 +69,22 @@ class Plant{
         return _date
     }
     
+    
     init(deviceName: String, deviceID: String, checkNow: String, date: [Date]){
         _deviceName = deviceName
         _deviceID = deviceID
         _checkNow = checkNow
         _date = date
+    }
+    
+    init(deviceName: String, deviceID: String, checkNow: String, date: [Date], needsWater:Int, lastWater:String, lastC:String){
+        _deviceName = deviceName
+        _deviceID = deviceID
+        _checkNow = checkNow
+        _date = date
+        _lastWatered = lastWater
+        _needsWater = needsWater
+        _lastChecked = lastC
     }
     
 }

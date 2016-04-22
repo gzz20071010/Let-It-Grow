@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172F438C1CC9777000491EA5 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F438B1CC9777000491EA5 /* Time.swift */; };
+		172F438E1CC9DD6E00491EA5 /* materialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F438D1CC9DD6E00491EA5 /* materialView.swift */; };
+		172F43911CC9DD7E00491EA5 /* materialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F438F1CC9DD7E00491EA5 /* materialButton.swift */; };
+		172F43921CC9DD7E00491EA5 /* materialTextFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F43901CC9DD7E00491EA5 /* materialTextFeild.swift */; };
+		172F43941CC9DF7000491EA5 /* materialLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F43931CC9DF7000491EA5 /* materialLabel.swift */; };
 		176861971CAC6035006145EA /* PlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176861961CAC6035006145EA /* PlantCell.swift */; };
 		176861991CAC62E8006145EA /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176861981CAC62E8006145EA /* Plant.swift */; };
 		1768619F1CB84EC6006145EA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768619E1CB84EC6006145EA /* Date.swift */; };
@@ -28,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172F438B1CC9777000491EA5 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		172F438D1CC9DD6E00491EA5 /* materialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialView.swift; sourceTree = "<group>"; };
+		172F438F1CC9DD7E00491EA5 /* materialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialButton.swift; sourceTree = "<group>"; };
+		172F43901CC9DD7E00491EA5 /* materialTextFeild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialTextFeild.swift; sourceTree = "<group>"; };
+		172F43931CC9DF7000491EA5 /* materialLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = materialLabel.swift; sourceTree = "<group>"; };
 		176861961CAC6035006145EA /* PlantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCell.swift; sourceTree = "<group>"; };
 		176861981CAC62E8006145EA /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		1768619E1CB84EC6006145EA /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 			children = (
 				176861981CAC62E8006145EA /* Plant.swift */,
 				1768619E1CB84EC6006145EA /* Date.swift */,
+				172F438B1CC9777000491EA5 /* Time.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -123,6 +134,10 @@
 				1790E18E1C6C4C5B009231A8 /* Main.storyboard */,
 				1790E1931C6C4C5B009231A8 /* LaunchScreen.storyboard */,
 				176861961CAC6035006145EA /* PlantCell.swift */,
+				172F438D1CC9DD6E00491EA5 /* materialView.swift */,
+				172F438F1CC9DD7E00491EA5 /* materialButton.swift */,
+				172F43931CC9DF7000491EA5 /* materialLabel.swift */,
+				172F43901CC9DD7E00491EA5 /* materialTextFeild.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -297,12 +312,17 @@
 				1798554E1C6DC8A300DD523F /* SideTwoVC.swift in Sources */,
 				176861971CAC6035006145EA /* PlantCell.swift in Sources */,
 				179855561C6DD28500DD523F /* AddPlantVC.swift in Sources */,
+				172F43911CC9DD7E00491EA5 /* materialButton.swift in Sources */,
+				172F438E1CC9DD6E00491EA5 /* materialView.swift in Sources */,
 				179855481C6DAA7A00DD523F /* SWRevealViewController.m in Sources */,
 				1798554C1C6DB38C00DD523F /* SideOneVC.swift in Sources */,
 				1790E18B1C6C4C5B009231A8 /* AppDelegate.swift in Sources */,
 				1790E19F1C6C52F5009231A8 /* Util.swift in Sources */,
 				1768619F1CB84EC6006145EA /* Date.swift in Sources */,
+				172F43941CC9DF7000491EA5 /* materialLabel.swift in Sources */,
+				172F438C1CC9777000491EA5 /* Time.swift in Sources */,
 				1798554A1C6DABE400DD523F /* MenuVC.swift in Sources */,
+				172F43921CC9DD7E00491EA5 /* materialTextFeild.swift in Sources */,
 				176861A31CBD3B2F006145EA /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

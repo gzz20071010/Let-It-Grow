@@ -12,5 +12,6 @@ import Foundation
 
 var UID:String!
 var USERNAME:String!
+let SHADOW_COLOR: CGFloat = 157.0/255.0
 
 let ref = Firebase(url: "https://letitgrow.firebaseio.com")

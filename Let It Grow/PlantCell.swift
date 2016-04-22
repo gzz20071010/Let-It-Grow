@@ -26,18 +26,24 @@ class PlantCell: UITableViewCell{
         super.awakeFromNib()
         // Initialization code
     }
-//    
-//    func configureCell(plant:Plant){
-//        self.plant = plant
-//        self.plantLb.text = plant.deviceName
-//    }
-//
-//    func configureCellString(str:String){
-//        print(str)
-//        self.plantLb.text = str
-//    }
     func configureCell(plant:Plant){
-        
+        textlb.text = plant.deviceName
+        sensorLbl1.text = "Sensor 1: "+parsingSensorData("\(plant.date[0].time[0].data["SENSOR_1"])")
+        sensorLb2.text = "Sensor 2: "+parsingSensorData("\(plant.date[0].time[0].data["SENSOR_2"])")
+        sensorLb3.text = "Sensor 3: "+parsingSensorData("\(plant.date[0].time[0].data["SENSOR_3"])")
+        waterBtn.titleLabel?.text = sensorLbl1.text
+    }
+    
+    func parsingSensorData(str:String)->String{
+        var status:String!
+        if Int(str) > 70 {
+            status = "Wet"
+        }else if Int(str) < 30{
+            status = "Dry"
+        }else{
+            status = "Good"
+        }
+        return status
     }
     
     @IBAction func onWaterBtnPressed(sender: AnyObject) {

@@ -21,37 +21,38 @@ class AddPlantVC: UIViewController {
 
 
     @IBAction func onAddBtnPressed(sender: AnyObject) {
-        let agg = ["LIGHT_SENSOR": 0.0,
-                    "SENSOR_1": 0.0,
-                    "SENSOR_2": 0.0,
-                    "SENSOR_3": 0.0,
-                    "TEMP_SENSOR": 0.0
-                    ]
+//        let agg = ["LIGHT_SENSOR": 0.0,
+//                    "SENSOR_1": 0.0,
+//                    "SENSOR_2": 0.0,
+//                    "SENSOR_3": 0.0,
+//                    "TEMP_SENSOR": 0.0
+//                    ]
+//        
+//        //let valueDate = ["2016-Jan-02": agg]
+//
+//        let value = ["DeviceSerialNumber" : serialNumTextfield.text!,
+//                     "PlantName": plantNameTF.text!,
+//                     "CheckNow": 0,
+//                     "ID": "1",
+//                     "Date": "2016-Jan-02"
+//                    ]
         
-        //let valueDate = ["2016-Jan-02": agg]
-
-        let value = ["DeviceSerialNumber" : serialNumTextfield.text!,
-                     "PlantName": plantNameTF.text!,
-                     "CheckNow": 0,
-                     "ID": "1",
-                     "Date": "2016-Jan-02"
-                    ]
-        
-        
+        let value = [serialNumTextfield.text! : plantNameTF.text!] as Dictionary<String, String>
         let usersRef = ref.childByAppendingPath("users").childByAppendingPath(UID).childByAppendingPath("Devices")
-        .childByAppendingPath(serialNumTextfield.text)
+        //.childByAppendingPath(serialNumTextfield.text)
         
-        usersRef.updateChildValues(value as [NSObject : AnyObject])
+        usersRef.updateChildValues(value)
+        //usersRef.updateChildValues(value as [NSObject : AnyObject])
         
-        let userRefAgg = usersRef.childByAppendingPath("Date")
-        .childByAppendingPath("2016-Jan-02").childByAppendingPath("Aggregate")
+        //let userRefAgg = usersRef.childByAppendingPath("Date")
+        //.childByAppendingPath("2016-Jan-02").childByAppendingPath("Aggregate")
         
-        userRefAgg.updateChildValues(agg)
+        //userRefAgg.updateChildValues(agg)
         
-        let userRefInit = usersRef.childByAppendingPath("Date")
-            .childByAppendingPath("2016-Jan-02").childByAppendingPath("Initial")
+        //let userRefInit = usersRef.childByAppendingPath("Date")
+            //.childByAppendingPath("2016-Jan-02").childByAppendingPath("Initial")
         
-        userRefInit.updateChildValues(agg)
+        //userRefInit.updateChildValues(agg)
         
         performSegueWithIdentifier("SideOneVC", sender: nil)
         

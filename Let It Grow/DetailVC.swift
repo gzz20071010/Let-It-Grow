@@ -14,9 +14,14 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var plantName: UILabel!
     @IBOutlet weak var plantStatus: UILabel!
+    
     @IBOutlet weak var lightSensorReading: UILabel!
     @IBOutlet weak var sensor1: UILabel!
     @IBOutlet weak var sensor2: UILabel!
+    @IBOutlet weak var sensor3: UILabel!
+    @IBOutlet weak var roomTemp: UILabel!
+    @IBOutlet weak var roomHeatIndex: UILabel!
+    @IBOutlet weak var roomHumidity: UILabel!
     @IBOutlet weak var tempReading: UILabel!
     
     var plant:Plant!
@@ -24,7 +29,7 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        plantName.text = plant.deviceName
+       // plantName.text = plant.deviceName
         
     }
     
