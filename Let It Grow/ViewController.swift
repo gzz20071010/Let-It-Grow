@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+//        parseDateString("2016-Apr-20")
+//        parseTimeString("10:40:39pm")
     }
     
     //ref.authUser("bobtony@example.com", password: "correcthorsebatterystaple",

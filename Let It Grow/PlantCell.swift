@@ -28,17 +28,20 @@ class PlantCell: UITableViewCell{
     }
     func configureCell(plant:Plant){
         textlb.text = plant.deviceName
-        sensorLbl1.text = "Sensor 1: "+parsingSensorData("\(plant.date[0].time[0].data["SENSOR_1"])")
-        sensorLb2.text = "Sensor 2: "+parsingSensorData("\(plant.date[0].time[0].data["SENSOR_2"])")
-        sensorLb3.text = "Sensor 3: "+parsingSensorData("\(plant.date[0].time[0].data["SENSOR_3"])")
-        waterBtn.titleLabel?.text = sensorLbl1.text
+        sensorLbl1.text = "Sensor 1: "+parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!)
+        sensorLb2.text = "Sensor 2: "+parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_2"]!)
+        sensorLb3.text = "Sensor 3: "+parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_3"]!)
+       // waterBtn.setTitle(parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!), forState: .Normal)
+//        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!)
+//        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_2"]!)
+//        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_3"]!)
     }
     
-    func parsingSensorData(str:String)->String{
+    func parsingSensorData(str:AnyObject)->String{
         var status:String!
-        if Int(str) > 70 {
+        if Int(str as! NSNumber) > 70 {
             status = "Wet"
-        }else if Int(str) < 30{
+        }else if Int(str as! NSNumber) < 30{
             status = "Dry"
         }else{
             status = "Good"

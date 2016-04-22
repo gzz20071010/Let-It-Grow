@@ -264,5 +264,12 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         }
     }
 
+    @IBAction func onWaterBtnPressed(sender: AnyObject) {
+        let value = ["Check_Now":1]
+        for (key,_) in myDevices{
+            let updateRef = ref.childByAppendingPath("Devices").childByAppendingPath(key)
+            updateRef.updateChildValues(value)
+        }
+    }
 
 }
