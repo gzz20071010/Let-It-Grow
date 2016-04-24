@@ -16,6 +16,9 @@ class AddPlantVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Add Plants"
+
+        
         // Do any additional setup after loading the view.
     }
 

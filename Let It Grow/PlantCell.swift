@@ -31,7 +31,7 @@ class PlantCell: UITableViewCell{
         sensorLbl1.text = "Sensor 1: "+parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!)
         sensorLb2.text = "Sensor 2: "+parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_2"]!)
         sensorLb3.text = "Sensor 3: "+parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_3"]!)
-       // waterBtn.setTitle(parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!), forState: .Normal)
+        waterBtn.setTitle(parsingSensorData(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!), forState: .Normal)
 //        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!)
 //        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_2"]!)
 //        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_3"]!)

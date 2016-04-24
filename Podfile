@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'Let It Grow' do
 pod 'Firebase', '>= 2.5.0'
+pod 'Charts'
 end
 

@@ -25,6 +25,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var tempReading: UILabel!
     @IBOutlet weak var lastChecked: UILabel!
     @IBOutlet weak var lastWatered: UILabel!
+    @IBOutlet weak var humi1: materialButton!
     
     var plant:Plant!
     
@@ -48,6 +49,9 @@ class DetailVC: UIViewController {
         lastChecked.text = "\(plant.lastChecked)"
         lastWatered.text = "\(plant.lastWatered)"
         
+        //self.navigationItem.title = "Plants Detail"
+
+        
     }
     
     
@@ -67,6 +71,25 @@ class DetailVC: UIViewController {
         
     }
     
+    @IBAction func onHumidity1(sender: AnyObject) {
+        var dic = Dictionary<String,AnyObject>()
+        dic[(humi1.titleLabel?.text)!] = plant
+        performSegueWithIdentifier("ChartVC", sender: dic)
+
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ChartVC"{
+            
+            if let chartVC = segue.destinationViewController as? ChartVC{
+                
+                if let plant = sender as? Dictionary<String,AnyObject>{
+                    chartVC.dic = plant
+                }
+            }
+        }
+    }
+
 
     
 }
