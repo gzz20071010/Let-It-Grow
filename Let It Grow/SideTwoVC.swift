@@ -22,5 +22,9 @@ class SideTwoVC: UIViewController {
         }
     }
 
+    @IBAction func onLogoutPressed(sender: AnyObject) {
+        ref.unauth()
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

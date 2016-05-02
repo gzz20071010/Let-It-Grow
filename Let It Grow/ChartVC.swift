@@ -18,23 +18,47 @@ class ChartVC: UIViewController, ChartViewDelegate {
     var dic:Dictionary<String,AnyObject> = [:]
     var itemName:String!
     var plant:Plant!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         barChartView.delegate = self
+        
         for (key,value) in dic{
-            //print("\(key)")
-            //print("\(value)")
+            print("\(key)")
+            print("\(value)")
             itemName = key
             plant = value as! Plant
+            for time in plant.date[findLatestDate(plant)].time{
+                //print(time.data["ROOM_HUMIDITY"])
+              
+                self.months.append(time.time)
+                if key == "Humidity 1 :"{
+                    self.reading.append(time.data["SENSOR_1"] as! Double)
+                }else if key == "Humidity 2 :"{
+                    self.reading.append(time.data["SENSOR_2"] as! Double)
+                }else if key == "Humidity 3 :"{
+                    self.reading.append(time.data["SENSOR_3"] as! Double)
+                }else if key == "Room Humidity :"{
+                    self.reading.append(time.data["ROOM_HUMIDITY"] as! Double)
+                }else if key == "Room Temperature :"{
+                    self.reading.append(time.data["ROOM_TEMPERATURE"] as! Double)
+                }else if key == "Light :"{
+                    self.reading.append(time.data["LIGHT_SENSOR"] as! Double)
+                }else if key == "Soil Temprature :"{
+                    self.reading.append(time.data["SOIL_TEMPERATURE"] as! Double)
+                }else if key == "Avg_Soil_Humidity:"{
+                    self.reading.append(time.data["AVG_SOIL_HUMIDITY"] as! Double)
+                }else if key == "Avg_Soil_Temp:"{
+                    self.reading.append(time.data["AVG_SOIL_TEMPERATURE"] as! Double)
+                }
+            }
         }
         // Do any additional setup after loading the view, typically from a nib.
         
-        for time in plant.date[1].time{
-            print(time.data["ROOM_HUMIDITY"])
-            months.append(time.time)
-            reading.append(time.data["ROOM_HUMIDITY"] as! Double)
-        }
+
         
         
         //months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

@@ -17,8 +17,9 @@ class AddPlantVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "Add Plants"
-
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
+    
         // Do any additional setup after loading the view.
     }
 

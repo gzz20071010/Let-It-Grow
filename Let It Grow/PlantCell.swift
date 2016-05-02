@@ -20,6 +20,7 @@ class PlantCell: UITableViewCell{
     @IBOutlet weak var sensorLb2: UILabel!
     @IBOutlet weak var sensorLb3: UILabel!
     @IBOutlet weak var waterBtn: UIButton!
+    @IBOutlet weak var pic: UIImageView!
     
     
     override func awakeFromNib() {
@@ -35,6 +36,10 @@ class PlantCell: UITableViewCell{
 //        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_1"]!)
 //        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_2"]!)
 //        print(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SENSOR_3"]!)
+    }
+    
+    func configureSamplePic(str:String){
+        pic.image = UIImage(named: str)
     }
     
     func parsingSensorData(str:AnyObject)->String{

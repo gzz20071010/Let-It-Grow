@@ -20,12 +20,21 @@ class DetailVC: UIViewController {
     @IBOutlet weak var sensor2: UILabel!
     @IBOutlet weak var sensor3: UILabel!
     @IBOutlet weak var roomTemp: UILabel!
-    @IBOutlet weak var roomHeatIndex: UILabel!
     @IBOutlet weak var roomHumidity: UILabel!
     @IBOutlet weak var tempReading: UILabel!
     @IBOutlet weak var lastChecked: UILabel!
     @IBOutlet weak var lastWatered: UILabel!
+    @IBOutlet weak var avgSoilHum: UILabel!
+    @IBOutlet weak var avgSoilTmp: UILabel!
+    
+    
+    
+    @IBOutlet weak var avg_soil_humi: materialButton!
+    @IBOutlet weak var avg_soil_temp: materialButton!
+    
+    
     @IBOutlet weak var humi1: materialButton!
+
     
     var plant:Plant!
     
@@ -46,17 +55,30 @@ class DetailVC: UIViewController {
         roomTemp.text = "\(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["ROOM_TEMPERATURE"]!)"
         roomHumidity.text = "\(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["ROOM_HUMIDITY"]!)"
         tempReading.text = "\(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["SOIL_TEMPERATURE"]!)"
+        
+        if let avgStmp = plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["AVG_SOIL_TEMPERATURE"]{
+            avgSoilTmp.text = "\(avgStmp)"
+
+        }
+        if let avgShumi = plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["AVG_SOIL_HUMIDITY"]{
+            avgSoilHum.text = "\(avgShumi)"
+        }
+//        avgSoilTmp.text = "\(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["AVG_SOIL_TEMPERATURE"]!)"
+//        avgSoilHum.text = "\(plant.date[findLatestDate(plant)].time[findLatestTime(plant)].data["AVG_SOIL_HUMIDITY"]!)"
         lastChecked.text = "\(plant.lastChecked)"
         lastWatered.text = "\(plant.lastWatered)"
         
         //self.navigationItem.title = "Plants Detail"
-
+        self.navigationItem.title = "Detail"
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
+        
         
     }
     
     
     @IBAction func onCheckBtnPressed(sender: AnyObject) {
-        let value = ["Needs_Water":1]
+        let value = ["Needs_Water":2]
         
         let waterRef = ref.childByAppendingPath("Devices").childByAppendingPath(plant.deviceID)
         waterRef.updateChildValues(value)
@@ -73,7 +95,7 @@ class DetailVC: UIViewController {
     
     @IBAction func onHumidity1(sender: AnyObject) {
         var dic = Dictionary<String,AnyObject>()
-        dic[(humi1.titleLabel?.text)!] = plant
+        dic[(sender.titleLabel!!.text)!] = plant
         performSegueWithIdentifier("ChartVC", sender: dic)
 
     }

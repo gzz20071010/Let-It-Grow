@@ -17,6 +17,7 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var myPlants = [Plant]()
     var myDevices = Dictionary<String, String>()
+    let picNames = ["plant0.png","plant.png","plant1"]
    // var myDeviceNames = [String]()
     
     override func viewDidLoad() {
@@ -26,12 +27,15 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         tableView.delegate = self
         
         self.navigationItem.title = "My Plants"
+        // self.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+
     }
     
     
@@ -237,6 +241,7 @@ class SideOneVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             //let str = myPlants[indexPath.row].deviceName
             //cell.textlb.text = str
             cell.configureCell(myPlants[indexPath.row])
+            cell.configureSamplePic(picNames[indexPath.row])
             return cell
         }
         return UITableViewCell()
